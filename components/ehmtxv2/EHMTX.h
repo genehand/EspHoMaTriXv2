@@ -5,7 +5,7 @@
 #include "esphome/components/web_server_base/web_server_base.h"
 
 #if defined USE_Fireplugin 
-  #if defined CONFIG_IDF_TARGET_ESP32 || defined CONFIG_IDF_TARGET_ESP32C3 || defined CONFIG_IDF_TARGET_ESP32S3
+  #ifndef ARDUINO
     #pragma warning ( "With IDF-Framework no Fire") 
     #undef USE_Fireplugin
   #endif
