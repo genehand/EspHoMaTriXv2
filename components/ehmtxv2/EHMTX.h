@@ -451,6 +451,7 @@ namespace esphome
     void add_on_show_display_trigger(EHMTXShowDisplayTrigger *t) { this->on_show_display_triggers_.push_back(t); }
     void add_on_night_mode_trigger(EHMTXNightModeTrigger *t) { this->on_night_mode_triggers_.push_back(t); }
     void update();
+    void time_sync();
 
     uint8_t get_brightness();
   };

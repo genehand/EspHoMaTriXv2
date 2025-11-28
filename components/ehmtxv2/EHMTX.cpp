@@ -1187,7 +1187,9 @@ namespace esphome
     ESP_LOGD(TAG, "calendar icon color r: %d g: %d b: %d", r, g, b);
   }
 
-  void EHMTX::update() // called from polling component
+  void EHMTX::update() {} // called from polling component
+
+  void EHMTX::time_sync()
   {
     if (!this->is_running)
     {
@@ -1203,11 +1205,9 @@ namespace esphome
           t->process();
         }
       }
-    }
-    else
-    {
-    }
+    } 
   }
+
 
   void EHMTX::force_screen(std::string icon_name, int32_t mode)
   {
